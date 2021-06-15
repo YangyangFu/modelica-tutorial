@@ -8,7 +8,7 @@ A tutorial repo for modeling, simulation and optimization in Modelica/FMU enviro
 ## Section 2 - Debugging Modelica Models
 
 ## Section 3 - Advanced Applications
-This section talks about how to use Modelia/FMU models to perform different advanced applications, including design 
+This section talks about how to use Modelia/FMU models to perform different advanced applications, including design optimization (e.g., system sizing, model calibration etc), simulation restart from a given states, pertubation experiment (e.g., system excitation for system identification) and optimal control (e.g., model predictive control of a target system) etc..
 
 ### Section 3.0 Some Basics
 
