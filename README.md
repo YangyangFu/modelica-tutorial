@@ -48,3 +48,10 @@ perfect model
 imperfect model
 
 ### Section 3.9 FMU-based Co-simulation among Different Simulators
+
+
+# Contact
+
+Yangyang Fu
+
+fuyy2008@gmail.com
