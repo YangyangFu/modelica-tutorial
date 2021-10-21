@@ -51,12 +51,16 @@ initialize = True
 for i in range(2):
     ts = i*60
     options['initialize'] = initialize    
-    # set time varying parameters: h
+    # set time varying parameters: this is to set different parameters for the FMU model at each time step
     fmu.set('a', i+1)
 
-    # has to use 3600. instead of 3600, because the former will produce a float number to avoid integrator errors in jmodelica. 
+    # run simulation with updated system parameters. 
     res_step = fmu.simulate(start_time=ts, final_time=ts+60., options=options)
+
+    # update initialize to false because the model only needs to be initialized at the very beginning.
     initialize = False
+
+    # print some variables
     print (len(res_step['y']))
     print (res_step['y'])
     print (res_step['time'])
@@ -75,8 +79,4 @@ plt.plot(np.array(tim),np.array(y))
 plt.savefig('result.pdf')
 plt.close()	
 
-# read results using buildingspy
-# res = Reader(output+'res60.mat','dymola')
-# t,power = res.values('fanSup.P')
-# print power
 
