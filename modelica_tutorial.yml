@@ -9,3 +9,5 @@ dependencies:
   - numpy
   - matplotlib
   - pyfmi
+  - pip:
+    - buildingspy
